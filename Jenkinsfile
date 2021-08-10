@@ -14,13 +14,6 @@ pipeline{
 				     sh 'sudo docker build -t helloworld:latest .'
 			}
 		}
-		
-		stage('Run'){
-		
-			steps {
-				     sh 'sudo docker run -p 5000:5000 helloworld:latest'
-			}
-		}
 
 		stage('Login') {
 
