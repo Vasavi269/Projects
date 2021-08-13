@@ -7,6 +7,8 @@ WORKDIR /task_helloworld
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
+RUN apt-get -qy update && apt-get -qy install libc6-dev && rm -rf /var/lib/apt/lists/*
+
 #copy the source code
 COPY helloworld.py .
 
