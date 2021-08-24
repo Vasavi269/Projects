@@ -56,7 +56,7 @@ for i in (range(len(points)-2)):
     x2 = centery + r*np.sin(theta)
     plt.plot(x1, x2)
     
-
+plt.savefig("result.png")
 plt.show()
     
 
